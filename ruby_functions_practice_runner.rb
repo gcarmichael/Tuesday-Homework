@@ -80,7 +80,16 @@ puts "The volume of the sphere is #{sphere_volume_1}. I expected 523.6."
 puts "The volume of the sphere is #{sphere_volume_2}. I expected 33.51." 
 
 ####Can you extend this to calculate other shapes' volumes? (Cylinder, Rectangular Prism, Cone, Capsule)
-# cylinder_1 = cylinder_volume
+print "What's the radius of your cylinder? "
+cylinder_input_radius = gets.chomp.to_i
+print "What's the height of your cylinder? "
+cylinder_input_height = gets.chomp.to_i
+cylinder_volume_input = cylinder_volume(cylinder_input_radius, cylinder_input_height)
+cylinder_volume_1 = cylinder_volume(5, 10)
+cylinder_volume_2 = cylinder_volume(2, 6)
+puts "The volume of the cylinder is #{cylinder_volume_input}."
+puts "The volume of the cylinder is #{cylinder_volume_1}. I expected 785.4."
+puts "The volume of the cylinder is #{cylinder_volume_2}. I expected 75.4." 
 
 
 ####http://ruby-doc.org/stdlib-2.1.1/libdoc/date/rdoc/Date.html

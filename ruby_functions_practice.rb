@@ -56,6 +56,11 @@ def sphere_volume(radius)
   (4 * ((Math::PI) * (radius ** 3)) / 3)
 end
 
+def cylinder_volume(radius, height)
+  # ((4/3) * ((Math::PI) * (radius ** 3)))
+  ((Math::PI) * (radius ** 2) * height)
+end
+
 def days_to_christmas(date)
   christmas_date = Date.new(2015, 12, 25)
   # ((christmas_date - Date.today).to_i) - 1
