@@ -52,14 +52,27 @@ def cube_volume(length)
 end
 
 def sphere_volume(radius)
-  # ((4/3) * ((Math::PI) * (radius ** 3)))
-  (4 * ((Math::PI) * (radius ** 3)) / 3)
+   ((4.0/3) * ((Math::PI) * (radius ** 3)))
 end
 
 def cylinder_volume(radius, height)
-  # ((4/3) * ((Math::PI) * (radius ** 3)))
   ((Math::PI) * (radius ** 2) * height)
 end
+
+def rprism_volume(length, height, width)
+  ((length) * (height) * (width))
+end
+
+def cone_volume(radius, height)
+  (((Math::PI) * (radius ** 2)) * (height / 3.0))
+end
+
+def capsule_volume(radius, length)
+  (Math::PI*(radius ** 2)) * ((4.0/3) * radius + length)
+end
+
+
+
 
 def days_to_christmas(date)
   christmas_date = Date.new(2015, 12, 25)

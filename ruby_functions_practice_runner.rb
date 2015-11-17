@@ -57,7 +57,6 @@ puts "The ninth month in 3 letters is #{ninth_month_string}"
 
 ####http://ruby-doc.org/core-2.1.4/Float.html
 ####Given the length of a side of a cube calculate the volume 
-
 # Cube the given length, output the volume.
 print "What length are the sides of the cube? "
 cube_input_length = gets.chomp.to_i
@@ -80,6 +79,8 @@ puts "The volume of the sphere is #{sphere_volume_1}. I expected 523.6."
 puts "The volume of the sphere is #{sphere_volume_2}. I expected 33.51." 
 
 ####Can you extend this to calculate other shapes' volumes? (Cylinder, Rectangular Prism, Cone, Capsule)
+
+####### Cylinder
 print "What's the radius of your cylinder? "
 cylinder_input_radius = gets.chomp.to_i
 print "What's the height of your cylinder? "
@@ -91,6 +92,43 @@ puts "The volume of the cylinder is #{cylinder_volume_input}."
 puts "The volume of the cylinder is #{cylinder_volume_1}. I expected 785.4."
 puts "The volume of the cylinder is #{cylinder_volume_2}. I expected 75.4." 
 
+####### Rectangular Prism
+print "What's the length of your rectangular prism? "
+rprism_input_length = gets.chomp.to_i
+print "What's the height of your rectangular prism? "
+rprism_input_height = gets.chomp.to_i
+print "What's the width of your rectangular prism? "
+rprism_input_width = gets.chomp.to_i
+rprism_volume_input = rprism_volume(rprism_input_length, rprism_input_height, rprism_input_width)
+rprism_volume_1 = rprism_volume(5, 10, 20)
+rprism_volume_2 = rprism_volume(2, 6, 3)
+puts "The volume of the rprism is #{rprism_volume_input}."
+puts "The volume of the rprism is #{rprism_volume_1}. I expected 1000."
+puts "The volume of the rprism is #{rprism_volume_2}. I expected 36." 
+
+####### Cone
+print "What's the radius of your cone? "
+cone_input_radius = gets.chomp.to_i
+print "What's the height of your cone? "
+cone_input_height = gets.chomp.to_i
+cone_volume_input = cone_volume(cone_input_radius, cone_input_height)
+cone_volume_1 = cone_volume(5, 10)
+cone_volume_2 = cone_volume(2, 6)
+puts "The volume of the cone is #{cone_volume_input}."
+puts "The volume of the cone is #{cone_volume_1}. I expected 261.8."
+puts "The volume of the cone is #{cone_volume_2}. I expected 25.13."
+
+####### Capsule
+print "What's the radius of your capsule? "
+capsule_input_radius = gets.chomp.to_i
+print "What's the side length of your capsule? "
+capsule_input_length = gets.chomp.to_i
+capsule_volume_input = capsule_volume(capsule_input_radius, capsule_input_length)
+capsule_volume_1 = capsule_volume(5, 10)
+capsule_volume_2 = capsule_volume(2, 6)
+puts "The volume of the capsule is #{capsule_volume_input}."
+puts "The volume of the capsule is #{capsule_volume_1}. I expected 1309."
+puts "The volume of the capsule is #{capsule_volume_2}. I expected 108.909."
 
 ####http://ruby-doc.org/stdlib-2.1.1/libdoc/date/rdoc/Date.html
 ####Days until christmas, Calculate how many nights there are from today until Christmas morning.
@@ -100,7 +138,7 @@ print "What is today's date (YYYY-MM-DD)? "
 given_date = Date.parse(gets.chomp) #Ev is the greatest
 date_today = Date.today
 nights_remaining = days_to_christmas(date_today)
-puts "There are #{nights_remaining} nights until Christmas. I expected 37 nights."
+puts "There are #{nights_remaining} nights until Christmas. I expected 38 nights."
 nights_remaining_input = days_to_christmas(given_date)
 puts "There are #{nights_remaining_input} nights until Christmas."
 
