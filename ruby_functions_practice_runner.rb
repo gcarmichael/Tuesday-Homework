@@ -59,14 +59,23 @@ puts "The ninth month in 3 letters is #{ninth_month_string}"
 ####Given the length of a side of a cube calculate the volume 
 
 # Cube the given length, output the volume.
+print "What length are the sides of the cube? "
+cube_input_length = gets.chomp.to_i
+
+cube_volume_input = cube_volume(cube_input_length)
 cube_volume_1 = cube_volume(5)
 cube_volume_2 = cube_volume(2)
+puts "The volume of your cube is #{cube_volume_input}."
 puts "The volume of the cube is #{cube_volume_1}. I expected 125."
 puts "The volume of the cube is #{cube_volume_2}. I expected 8."
 
 ####Given the radius of a sphere calculate the volume
+print "What's the radius of your sphere? "
+sphere_input_radius = gets.chomp.to_i
+sphere_volume_input = sphere_volume(sphere_input_radius)
 sphere_volume_1 = sphere_volume(5)
 sphere_volume_2 = sphere_volume(2)
+puts "The volume of the sphere is #{sphere_volume_input}."
 puts "The volume of the sphere is #{sphere_volume_1}. I expected 523.6."
 puts "The volume of the sphere is #{sphere_volume_2}. I expected 33.51." 
 
@@ -76,11 +85,22 @@ puts "The volume of the sphere is #{sphere_volume_2}. I expected 33.51."
 
 ####http://ruby-doc.org/stdlib-2.1.1/libdoc/date/rdoc/Date.html
 ####Days until christmas, Calculate how many nights there are from today until Christmas morning.
-nights_remaining = days_to_christmas
-puts "There are #{nights_remaining} until Christmas. I expected 37 nights."
+print "What is today's date (YYYY-MM-DD)? "
+# given_date = gets.chomp
+# given_date = Date.parse(given_date)
+given_date = Date.parse(gets.chomp) #Ev is the greatest
+date_today = Date.today
+nights_remaining = days_to_christmas(date_today)
+puts "There are #{nights_remaining} nights until Christmas. I expected 37 nights."
+nights_remaining_input = days_to_christmas(given_date)
+puts "There are #{nights_remaining_input} nights until Christmas."
 
 ####Given a date of birth, calculate how old a person born on that date would be
-how_old = age(1990, 2, 13)
+print "What is your birth date (YYYY-MM-DD)? "
+given_birthdate = Date.parse(gets.chomp)
+how_old_input = age2(given_birthdate)
+puts "You are #{how_old_input} years old."
+how_old = age(1990, 02, 13)
 puts "You are #{how_old} years old. I expected 25."
 
 #### Create a command line interface using put, gets to interact with the your functions 

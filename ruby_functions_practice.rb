@@ -56,9 +56,10 @@ def sphere_volume(radius)
   (4 * ((Math::PI) * (radius ** 3)) / 3)
 end
 
-def days_to_christmas
+def days_to_christmas(date)
   christmas_date = Date.new(2015, 12, 25)
-  ((christmas_date - Date.today).to_i) - 1
+  # ((christmas_date - Date.today).to_i) - 1
+  ((christmas_date - date).to_i)
 end
 
 def age(year, month, date)
@@ -66,6 +67,8 @@ def age(year, month, date)
   ((Date.today - dob).to_i) / 365
 end
 
-
+def age2(date)
+  ((Date.today - date).to_i) / 365
+end
 
 
